@@ -1,31 +1,48 @@
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
 
 export default function App() {
   return (
-   <View style={styles.Appcontainer}>
-        <View style={styles.TextInput}>
-            <TextInput styles={styles.TextInput} placeholder='Your cource goal!' />
-            <Button title='Add Goals..'/>
-        </View>
-        <Text>List of goals...</Text>
-   </View>
+    <View style={{ 
+      padding: 50,
+       flexDirection: 'row',
+        alignItems: 'center',
+         justifyContent: 'center',
+          flexWrap: 'wrap' }}>
+      <View
+        style={{
+          backgroundColor: 'red',
+          width: '80%',
+          height: 100,
+          justifyContent: 'center',
+          alignItems: 'center'
+          ,
+        }}
+      >
+        <Text>1</Text>
+      </View>
+      <View
+        style={{
+          backgroundColor: 'blue',
+          justifyContent: 'center',
+          width: '80%',
+          height: 100,
+          alignItems: 'center'
+        }}
+      >
+        <Text>2</Text>
+      </View>
+      <View
+        style={{
+          backgroundColor: 'green',
+          width: '80%',
+          height: 100,
+          justifyContent: 'center',
+          alignItems: 'center',       
+        }}
+      >
+        <Text>3</Text>
+      </View>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  Appcontainer: {
-    padiing: 50,
-    bottom: -25,
-   },
-  inputContainer: {
-     flexDirection: 'row',
-     justifyContent: 'space-between',
-   },
-  TextInput: {
-    borderWidth: 1,
-    borderColor: 'black',
-    width: '80%',
-    marginRight: 8,
-    padiing: 8,
-   },
-});
